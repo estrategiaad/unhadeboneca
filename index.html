@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unha de Boneca Esmalteria | A Melhor Experiência em Manicure de Brasília</title>
+    <meta name="description" content="Venha conhecer todas as tendências do momento na esmalteria eleita 5 vezes a melhor de Brasília.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js Plugins & Core -->
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Tailwind CSS Configuration */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#EBD1D4',
+                        'brand-primary-dark': '#D9B8BB',
+                        'brand-bg': '#FFFBFB',
+                        'brand-text': '#5C4B51',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                },
+            },
+        };
+
+        /* Styles for scroll-triggered fade-in animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gentle background motion effect */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #FFFBFB, #F9F3F4, #FFFBFB);
+            background-size: 400% 400%;
+            animation: gradient-animation 20s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+
+<body class="bg-brand-bg text-brand-text antialiased">
+
+    <!-- 0. Navigation Bar (Fixed) -->
+    <header x-data="{ mobileMenuOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-brand-bg/80 backdrop-blur-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-serif text-2xl font-bold text-brand-text">
+                Unha de Boneca
+            </div>
+
+            <div class="hidden md:flex items-center space-x-10 font-medium">
+                <a href="#services" class="hover:text-brand-primary-dark transition-colors">Serviços</a>
+                <a href="#why-us" class="hover:text-brand-primary-dark transition-colors">Sobre Nós</a>
+                <a href="#testimonials" class="hover:text-brand-primary-dark transition-colors">Depoimentos</a>
+                <a href="#faq" class="hover:text-brand-primary-dark transition-colors">FAQ</a>
+            </div>
+
+            <a href="#final-cta" class="hidden md:inline-block bg-brand-primary text-brand-text px-6 py-2 rounded-full font-semibold hover:bg-brand-primary-dark transition-all duration-300">
+                Agende sua visita
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" x-transition class="md:hidden bg-brand-bg py-4 shadow-lg">
+            <a href="#services" class="block text-center py-3 hover:bg-brand-primary/30">Serviços</a>
+            <a href="#why-us" class="block text-center py-3 hover:bg-brand-primary/30">Sobre Nós</a>
+            <a href="#testimonials" class="block text-center py-3 hover:bg-brand-primary/30">Depoimentos</a>
+            <a href="#faq" class="block text-center py-3 hover:bg-brand-primary/30">FAQ</a>
+            <a href="#final-cta" class="block text-center w-3/4 mx-auto mt-4 bg-brand-primary text-brand-text px-5 py-3 rounded-full font-semibold hover:bg-brand-primary-dark transition-colors">
+                Agende sua visita
+            </a>
+        </div>
+    </header>
+
+    <main class="pt-28">
+        <!-- 1. Hero (Hook Section) -->
+        <section class="min-h-screen animated-gradient">
+            <div class="container mx-auto px-6 h-full grid md:grid-cols-2 items-center gap-16">
+                <div class="fade-in">
+                    <p class="text-lg md:text-xl text-gray-600 mb-6">
+                        Eleita a melhor Esmalteria de Brasília por 5 vezes
+                    </p>
+                    <h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight text-brand-text mb-6">
+                        A melhor experiência em Esmalteria e Manicure de Brasília
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-xl">
+                        Venha conhecer todas as tendências do momento e desfrute de um momento só seu.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-start mb-8">
+                        <a href="#final-cta" class="bg-transparent border-2 border-gray-300 text-brand-text px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                            Agende sua visita!
+                        </a>
+                        <a href="#testimonials" class="bg-transparent border-2 border-gray-300 text-brand-text px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                            Conheça os resultados
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-500 font-semibold tracking-wider">
+                        100.000+ CLIENTES SATISFEITAS
+                    </p>
+                </div>
+                <div class="flex justify-center items-center fade-in" style="transition-delay: 200ms;">
+                    <img src="dona.jpg" alt="Prateleira com diversas cores de esmaltes" class="rounded-2xl shadow-2xl max-w-full h-auto object-cover w-[600px] h-[650px]">
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Features Section -->
+        <section id="services" class="py-28">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="font-serif text-5xl font-bold mb-16 fade-in">Cuidado em cada detalhe</h2>
+                
+                <div class="bg-white p-10 rounded-2xl shadow-xl mb-8 text-left max-w-5xl mx-auto fade-in">
+                    <h3 class="font-serif text-3xl font-bold text-brand-text mb-3">Higiene e Esterilização</h3>
+                    <p class="text-gray-600 text-lg">Seguimos rigorosos padrões de higiene e esterilização, utilizando autoclaves e materiais descartáveis para garantir sua total segurança e bem-estar.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 100ms;">
+                        <h4 class="font-serif text-2xl font-bold mb-3">Atendimento Exclusivo</h4>
+                        <p class="text-gray-600">Atendimento agendado para sua maior comodidade, garantindo um momento relaxante e sem esperas.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 200ms;">
+                        <h4 class="font-serif text-2xl font-bold mb-3">Serviços Completos</h4>
+                        <p class="text-gray-600">Oferta de todos os serviços de manicure e pedicure, dos clássicos aos mais modernos alongamentos.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 300ms;">
+                        <h4 class="font-serif text-2xl font-bold mb-3">Qualidade Superior</h4>
+                        <p class="text-gray-600">Uso de produtos de alta qualidade e das melhores marcas do mercado para resultados impecáveis e duradouros.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. "Why Choose" Section -->
+        <section id="why-us" class="py-28 bg-white">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="font-serif text-5xl font-bold mb-16 fade-in">Nossa Essência</h2>
+                <div class="grid md:grid-cols-3 gap-16 max-w-6xl mx-auto">
+                    <div class="fade-in" style="transition-delay: 100ms;">
+                        <h3 class="font-serif text-3xl font-bold text-brand-text mb-4">Time Especializado</h3>
+                        <p class="text-gray-600 text-lg">Nossas colaboradoras possuem mais de 15 anos de experiência, unindo técnica e arte para um resultado perfeito.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 200ms;">
+                        <h3 class="font-serif text-3xl font-bold text-brand-text mb-4">Resultados Duradouros</h3>
+                        <p class="text-gray-600 text-lg">Focamos em técnicas e produtos que garantem a maior durabilidade para suas unhas, mantendo a beleza por mais tempo.</p>
+                    </div>
+                    <div class="fade-in" style="transition-delay: 300ms;">
+                        <h3 class="font-serif text-3xl font-bold text-brand-text mb-4">4 Unidades de Atendimento</h3>
+                        <p class="text-gray-600 text-lg">Com 4 unidades em pontos estratégicos de Brasília, sempre há uma Unha de Boneca perto de você.</p>
+                    </div>
+                </div>
+             </div>
+        </section>
+        
+        <!-- 5. Testimonials Section -->
+        <section id="testimonials" class="py-28">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-5xl font-bold text-center mb-16 fade-in">A Experiência de Nossas Clientes</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 100ms;">
+                        <div class="flex items-center mb-4">
+                            <!-- AI Image: Professional, elegant avatar of a woman. Soft, natural lighting. -->
+                            <img src="https://placehold.co/50x50/EBD1D4/5C4B51?text=LM" alt="Avatar de Ludmila Marques" class="w-14 h-14 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-lg">Ludmila Marques</p>
+                                <div class="flex text-yellow-500 mt-1">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg">"Experiência maravilhosa! Excelente trabalho. Agendamento rápido."</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 200ms;">
+                        <div class="flex items-center mb-4">
+                             <!-- AI Image: Professional, elegant avatar of a woman. Soft, natural lighting. -->
+                            <img src="https://placehold.co/50x50/EBD1D4/5C4B51?text=CF" alt="Avatar de Célia Fernandes" class="w-14 h-14 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-lg">Célia Fernandes</p>
+                                <div class="flex text-yellow-500 mt-1">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg">"Ambiente agradável e excelente atendimento da Maria! Muito satisfeita!!!"</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 300ms;">
+                        <div class="flex items-center mb-4">
+                             <!-- AI Image: Professional, elegant avatar of a woman. Soft, natural lighting. -->
+                            <img src="https://placehold.co/50x50/EBD1D4/5C4B51?text=NB" alt="Avatar de Nayara Balbi" class="w-14 h-14 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-lg">Nayara Balbi</p>
+                                <div class="flex text-yellow-500 mt-1">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-lg">"São especialistas e deixaram minhas mãos e pés um show! Apreciei o trabalho delas, o cuidado e a dedicação!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FAQ Section -->
+        <section id="faq" class="py-28 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="font-serif text-5xl font-bold text-center mb-16 fade-in">Perguntas Frequentes</h2>
+                <div x-data="{ openFaq: 1 }" class="space-y-6 fade-in">
+                    <!-- FAQ Items -->
+                    <div class="border-b border-brand-primary pb-4">
+                        <button @click="openFaq = openFaq === 1 ? 0 : 1" class="w-full flex justify-between items-center text-left text-xl font-semibold">
+                            <span>Quais são os cuidados pós-tratamento?</span>
+                            <span class="text-2xl" x-text="openFaq === 1 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="openFaq === 1" x-collapse.duration.500ms class="pt-4 text-gray-600 text-lg">
+                           <p>Incluem evitar exposição excessiva à água, usar luvas em tarefas domésticas, hidratar mãos e pés, evitar produtos químicos e fazer manutenções regulares.</p>
+                        </div>
+                    </div>
+                     <div class="border-b border-brand-primary pb-4">
+                        <button @click="openFaq = openFaq === 2 ? 0 : 2" class="w-full flex justify-between items-center text-left text-xl font-semibold">
+                            <span>O que é depilação egípcia?</span>
+                            <span class="text-2xl" x-text="openFaq === 2 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="openFaq === 2" x-collapse.duration.500ms class="pt-4 text-gray-600 text-lg">
+                           <p>É um método de remoção de pelos com um fio de algodão, popular pela precisão, eficácia e por ser menos irritante para a pele, já que não usa químicos.</p>
+                        </div>
+                    </div>
+                     <div class="border-b border-brand-primary pb-4">
+                        <button @click="openFaq = openFaq === 3 ? 0 : 3" class="w-full flex justify-between items-center text-left text-xl font-semibold">
+                            <span>Vocês oferecem tratamentos para cílios e sobrancelhas?</span>
+                            <span class="text-2xl" x-text="openFaq === 3 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="openFaq === 3" x-collapse.duration.500ms class="pt-4 text-gray-600 text-lg">
+                           <p>Sim, oferecemos uma variedade de tratamentos, incluindo design de sobrancelhas, tintura, alongamento de cílios, entre outros.</p>
+                        </div>
+                    </div>
+                     <div class="border-b border-brand-primary pb-4">
+                        <button @click="openFaq = openFaq === 4 ? 0 : 4" class="w-full flex justify-between items-center text-left text-xl font-semibold">
+                            <span>Qual a diferença entre esmaltação em gel e tradicional?</span>
+                            <span class="text-2xl" x-text="openFaq === 4 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="openFaq === 4" x-collapse.duration.500ms class="pt-4 text-gray-600 text-lg">
+                           <p>A esmaltação em gel é curada sob luz UV para maior durabilidade, enquanto a tradicional seca ao ar livre e dura menos.</p>
+                        </div>
+                    </div>
+                     <div class="border-b border-brand-primary pb-4">
+                        <button @click="openFaq = openFaq === 5 ? 0 : 5" class="w-full flex justify-between items-center text-left text-xl font-semibold">
+                            <span>Como funciona o banho de gel?</span>
+                            <span class="text-2xl" x-text="openFaq === 5 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="openFaq === 5" x-collapse.duration.500ms class="pt-4 text-gray-600 text-lg">
+                           <p>É um procedimento que aplica uma camada protetora de gel sobre as unhas naturais, fortalecendo-as, aumentando a durabilidade do esmalte e o brilho.</p>
+                        </div>
+                    </div>
+                     <div class="border-b border-brand-primary pb-4">
+                        <button @click="openFaq = openFaq === 6 ? 0 : 6" class="w-full flex justify-between items-center text-left text-xl font-semibold">
+                            <span>O que é fibra de vidro?</span>
+                            <span class="text-2xl" x-text="openFaq === 6 ? '-' : '+'"></span>
+                        </button>
+                        <div x-show="openFaq === 6" x-collapse.duration.500ms class="pt-4 text-gray-600 text-lg">
+                           <p>É uma técnica de alongamento que utiliza fibras sintéticas para fortalecer e estender as unhas naturais, com benefícios de alta resistência e aspecto natural.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Final CTA -->
+        <section id="final-cta" class="py-28 animated-gradient">
+            <div class="container mx-auto px-6">
+                <div class="bg-white rounded-2xl shadow-2xl p-10 md:p-16 grid md:grid-cols-2 gap-10 items-center fade-in">
+                    <div class="text-center md:text-left">
+                        <h2 class="font-serif text-5xl font-extrabold text-brand-text mb-6">Reserve seu momento de beleza conosco!</h2>
+                        <p class="text-gray-600 text-lg mb-8">Clique no botão abaixo para agendar seu horário em uma de nossas unidades e prepare-se para uma experiência inesquecível.</p>
+                        <a href="#" class="bg-brand-text text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-black transform hover:scale-105 transition-all duration-300 inline-block">
+                            Agendar Horário
+                        </a>
+                    </div>
+                    <div class="hidden md:flex justify-center">
+                        <!-- AI Image: Elegant, abstract mockup of a booking app on a phone screen, surrounded by soft, out-of-focus floral elements. The UI on screen is clean and uses the brand's color palette. -->
+                        <img src="https://placehold.co/400x400/EBD1D4/5C4B51?text=Agende+Aqui" alt="Mockup de agendamento online" class="rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. Footer -->
+    <footer class="bg-white py-10">
+        <div class="container mx-auto px-6 text-center md:flex md:justify-between items-center">
+            <p class="text-gray-600 font-serif text-lg">&copy; 2025 Unha de Boneca Esmalteria</p>
+            <div class="flex justify-center space-x-8 mt-6 md:mt-0">
+                <a href="#" class="text-gray-500 hover:text-brand-primary-dark">Instagram</a>
+                <a href="#" class="text-gray-500 hover:text-brand-primary-dark">Facebook</a>
+                <a href="#" class="text-gray-500 hover:text-brand-primary-dark">Google Maps</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // JavaScript for fade-in animations on scroll
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeInElements.forEach(el => {
+            observer.observe(el);
+        });
+    });
+    </script>
+
+</body>
+</html>
