@@ -24,10 +24,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-primary': '#EBD1D4',
-                        'brand-primary-dark': '#D9B8BB',
-                        'brand-bg': '#FFFBFB',
-                        'brand-text': '#5C4B51',
+                        'brand-primary': '#EB9E6E',
+                        'brand-primary-dark': '#EB6E6E',
+                        'brand-bg': '#E0D3B8',
+                        'brand-text': '#706F6B',
+                        'brand-accent': '#A69A81',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -50,7 +51,7 @@
 
         /* Gentle background motion effect */
         .animated-gradient {
-            background: linear-gradient(-45deg, #FFFBFB, #F9F3F4, #FFFBFB);
+            background: linear-gradient(-45deg, #E0D3B8, #FFFBFB, #E0D3B8);
             background-size: 400% 400%;
             animation: gradient-animation 20s ease infinite;
         }
@@ -73,13 +74,13 @@
             </div>
 
             <div class="hidden md:flex items-center space-x-10 font-medium">
-                <a href="#services" class="hover:text-brand-primary-dark transition-colors">Serviços</a>
-                <a href="#why-us" class="hover:text-brand-primary-dark transition-colors">Sobre Nós</a>
-                <a href="#testimonials" class="hover:text-brand-primary-dark transition-colors">Depoimentos</a>
-                <a href="#faq" class="hover:text-brand-primary-dark transition-colors">FAQ</a>
+                <a href="#services" class="hover:text-brand-primary transition-colors">Serviços</a>
+                <a href="#why-us" class="hover:text-brand-primary transition-colors">Sobre Nós</a>
+                <a href="#testimonials" class="hover:text-brand-primary transition-colors">Depoimentos</a>
+                <a href="#faq" class="hover:text-brand-primary transition-colors">FAQ</a>
             </div>
 
-            <a href="#final-cta" class="hidden md:inline-block bg-brand-primary text-brand-text px-6 py-2 rounded-full font-semibold hover:bg-brand-primary-dark transition-all duration-300">
+            <a href="#final-cta" class="hidden md:inline-block bg-brand-primary-dark text-white px-6 py-2 rounded-full font-semibold hover:brightness-90 transition-all duration-300">
                 Agende sua visita
             </a>
 
@@ -93,11 +94,11 @@
 
         <!-- Mobile Menu -->
         <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" x-transition class="md:hidden bg-brand-bg py-4 shadow-lg">
-            <a href="#services" class="block text-center py-3 hover:bg-brand-primary/30">Serviços</a>
-            <a href="#why-us" class="block text-center py-3 hover:bg-brand-primary/30">Sobre Nós</a>
-            <a href="#testimonials" class="block text-center py-3 hover:bg-brand-primary/30">Depoimentos</a>
-            <a href="#faq" class="block text-center py-3 hover:bg-brand-primary/30">FAQ</a>
-            <a href="#final-cta" class="block text-center w-3/4 mx-auto mt-4 bg-brand-primary text-brand-text px-5 py-3 rounded-full font-semibold hover:bg-brand-primary-dark transition-colors">
+            <a href="#services" class="block text-center py-3 hover:bg-brand-primary/10">Serviços</a>
+            <a href="#why-us" class="block text-center py-3 hover:bg-brand-primary/10">Sobre Nós</a>
+            <a href="#testimonials" class="block text-center py-3 hover:bg-brand-primary/10">Depoimentos</a>
+            <a href="#faq" class="block text-center py-3 hover:bg-brand-primary/10">FAQ</a>
+            <a href="#final-cta" class="block text-center w-3/4 mx-auto mt-4 bg-brand-primary-dark text-white px-5 py-3 rounded-full font-semibold hover:brightness-90 transition-colors">
                 Agende sua visita
             </a>
         </div>
@@ -118,10 +119,10 @@
                         Venha conhecer todas as tendências do momento e desfrute de um momento só seu.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-start mb-8">
-                        <a href="#final-cta" class="bg-transparent border-2 border-gray-300 text-brand-text px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                        <a href="#final-cta" class="bg-[#FDEFF2] border-2 border-gray-300 text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
                             Agende sua visita!
                         </a>
-                        <a href="#testimonials" class="bg-transparent border-2 border-gray-300 text-brand-text px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                        <a href="#testimonials" class="bg-[#FDEFF2] border-2 border-gray-300 text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
                             Conheça os resultados
                         </a>
                     </div>
@@ -138,24 +139,24 @@
         <!-- 3. Features Section -->
         <section id="services" class="py-28">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="font-serif text-5xl font-bold mb-16 fade-in">Cuidado em cada detalhe</h2>
+                <h2 class="font-serif text-5xl font-bold mb-16 fade-in text-brand-primary-dark">Cuidado em cada detalhe</h2>
                 
                 <div class="bg-white p-10 rounded-2xl shadow-xl mb-8 text-left max-w-5xl mx-auto fade-in">
-                    <h3 class="font-serif text-3xl font-bold text-brand-text mb-3">Higiene e Esterilização</h3>
+                    <h3 class="font-serif text-3xl font-bold text-brand-primary-dark mb-3">Higiene e Esterilização</h3>
                     <p class="text-gray-600 text-lg">Seguimos rigorosos padrões de higiene e esterilização, utilizando autoclaves e materiais descartáveis para garantir sua total segurança e bem-estar.</p>
                 </div>
                 
                 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 100ms;">
-                        <h4 class="font-serif text-2xl font-bold mb-3">Atendimento Exclusivo</h4>
+                        <h4 class="font-serif text-2xl font-bold mb-3 text-brand-primary-dark">Atendimento Exclusivo</h4>
                         <p class="text-gray-600">Atendimento agendado para sua maior comodidade, garantindo um momento relaxante e sem esperas.</p>
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 200ms;">
-                        <h4 class="font-serif text-2xl font-bold mb-3">Serviços Completos</h4>
+                        <h4 class="font-serif text-2xl font-bold mb-3 text-brand-primary-dark">Serviços Completos</h4>
                         <p class="text-gray-600">Oferta de todos os serviços de manicure e pedicure, dos clássicos aos mais modernos alongamentos.</p>
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 300ms;">
-                        <h4 class="font-serif text-2xl font-bold mb-3">Qualidade Superior</h4>
+                        <h4 class="font-serif text-2xl font-bold mb-3 text-brand-primary-dark">Qualidade Superior</h4>
                         <p class="text-gray-600">Uso de produtos de alta qualidade e das melhores marcas do mercado para resultados impecáveis e duradouros.</p>
                     </div>
                 </div>
