@@ -29,6 +29,7 @@
                         'brand-bg': '#E0D3B8',
                         'brand-text': '#706F6B',
                         'brand-accent': '#A69A81',
+                        'brand-border': '#EBD1D4',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -77,10 +78,11 @@
                 <a href="#services" class="hover:text-brand-primary transition-colors">Serviços</a>
                 <a href="#why-us" class="hover:text-brand-primary transition-colors">Sobre Nós</a>
                 <a href="#testimonials" class="hover:text-brand-primary transition-colors">Depoimentos</a>
+                <a href="#gallery" class="hover:text-brand-primary transition-colors">Galeria</a>
                 <a href="#faq" class="hover:text-brand-primary transition-colors">FAQ</a>
             </div>
 
-            <a href="#final-cta" class="hidden md:inline-block bg-brand-primary-dark text-white px-6 py-2 rounded-full font-semibold hover:brightness-90 transition-all duration-300">
+            <a href="https://wa.me/5561994460606" target="_blank" class="hidden md:inline-block bg-brand-primary-dark text-brand-border px-6 py-2 rounded-full font-semibold hover:brightness-90 transition-all duration-300">
                 Agende sua visita
             </a>
 
@@ -97,8 +99,9 @@
             <a href="#services" class="block text-center py-3 hover:bg-brand-primary/10">Serviços</a>
             <a href="#why-us" class="block text-center py-3 hover:bg-brand-primary/10">Sobre Nós</a>
             <a href="#testimonials" class="block text-center py-3 hover:bg-brand-primary/10">Depoimentos</a>
+            <a href="#gallery" class="block text-center py-3 hover:bg-brand-primary/10">Galeria</a>
             <a href="#faq" class="block text-center py-3 hover:bg-brand-primary/10">FAQ</a>
-            <a href="#final-cta" class="block text-center w-3/4 mx-auto mt-4 bg-brand-primary-dark text-white px-5 py-3 rounded-full font-semibold hover:brightness-90 transition-colors">
+            <a href="https://wa.me/5561994460606" target="_blank" class="block text-center w-3/4 mx-auto mt-4 bg-brand-primary-dark text-brand-border px-5 py-3 rounded-full font-semibold hover:brightness-90 transition-colors">
                 Agende sua visita
             </a>
         </div>
@@ -119,10 +122,10 @@
                         Venha conhecer todas as tendências do momento e desfrute de um momento só seu.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-start mb-8">
-                        <a href="#final-cta" class="bg-[#FDEFF2] border-2 border-gray-300 text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                        <a href="https://wa.me/5561994460606" target="_blank" class="bg-[#EBD1D4] border-2 border-gray-300 text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
                             Agende sua visita!
                         </a>
-                        <a href="#testimonials" class="bg-[#FDEFF2] border-2 border-gray-300 text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
+                        <a href="#testimonials" class="bg-[#EBD1D4] border-2 border-gray-300 text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-black hover:text-white hover:border-black transition-all duration-300">
                             Conheça os resultados
                         </a>
                     </div>
@@ -191,7 +194,6 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 100ms;">
                         <div class="flex items-center mb-4">
-                            <!-- AI Image: Professional, elegant avatar of a woman. Soft, natural lighting. -->
                             <img src="https://placehold.co/50x50/EBD1D4/5C4B51?text=LM" alt="Avatar de Ludmila Marques" class="w-14 h-14 rounded-full mr-4">
                             <div>
                                 <p class="font-bold text-lg">Ludmila Marques</p>
@@ -202,7 +204,6 @@
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 200ms;">
                         <div class="flex items-center mb-4">
-                             <!-- AI Image: Professional, elegant avatar of a woman. Soft, natural lighting. -->
                             <img src="https://placehold.co/50x50/EBD1D4/5C4B51?text=CF" alt="Avatar de Célia Fernandes" class="w-14 h-14 rounded-full mr-4">
                             <div>
                                 <p class="font-bold text-lg">Célia Fernandes</p>
@@ -213,7 +214,6 @@
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-xl fade-in" style="transition-delay: 300ms;">
                         <div class="flex items-center mb-4">
-                             <!-- AI Image: Professional, elegant avatar of a woman. Soft, natural lighting. -->
                             <img src="https://placehold.co/50x50/EBD1D4/5C4B51?text=NB" alt="Avatar de Nayara Balbi" class="w-14 h-14 rounded-full mr-4">
                             <div>
                                 <p class="font-bold text-lg">Nayara Balbi</p>
@@ -226,8 +226,27 @@
             </div>
         </section>
 
-        <!-- 6. FAQ Section -->
-        <section id="faq" class="py-28 bg-white">
+        <!-- 6. Gallery Section -->
+        <section id="gallery" class="py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-5xl font-bold text-center mb-16 fade-in">Nossa Galeria</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div class="fade-in"><img src="unha1.jpg" alt="Foto de unha decorada 1" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 50ms;"><img src="unha2.jpg" alt="Foto de unha decorada 2" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 100ms;"><img src="unha3.jpg" alt="Foto de unha decorada 3" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 150ms;"><img src="unha4.jpg" alt="Foto de unha decorada 4" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 200ms;"><img src="unha5.jpg" alt="Foto de unha decorada 5" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 250ms;"><img src="unha6.jpg" alt="Foto de unha decorada 6" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 300ms;"><img src="unha7.jpg" alt="Foto de unha decorada 7" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 350ms;"><img src="unha8.jpg" alt="Foto de unha decorada 8" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 400ms;"><img src="unha9.jpg" alt="Foto de unha decorada 9" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                    <div class="fade-in" style="transition-delay: 450ms;"><img src="unha10.jpg" alt="Foto de unha decorada 10" class="rounded-lg shadow-lg border-4 border-brand-border w-full h-full object-cover"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FAQ Section -->
+        <section id="faq" class="py-28">
             <div class="container mx-auto px-6 max-w-4xl">
                 <h2 class="font-serif text-5xl font-bold text-center mb-16 fade-in">Perguntas Frequentes</h2>
                 <div x-data="{ openFaq: 1 }" class="space-y-6 fade-in">
@@ -290,14 +309,14 @@
             </div>
         </section>
 
-        <!-- 7. Final CTA -->
+        <!-- 8. Final CTA -->
         <section id="final-cta" class="py-28 animated-gradient">
             <div class="container mx-auto px-6">
                 <div class="bg-white rounded-2xl shadow-2xl p-10 md:p-16 grid md:grid-cols-2 gap-10 items-center fade-in">
                     <div class="text-center md:text-left">
                         <h2 class="font-serif text-5xl font-extrabold text-brand-text mb-6">Reserve seu momento de beleza conosco!</h2>
                         <p class="text-gray-600 text-lg mb-8">Clique no botão abaixo para agendar seu horário em uma de nossas unidades e prepare-se para uma experiência inesquecível.</p>
-                        <a href="#" class="bg-brand-text text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-black transform hover:scale-105 transition-all duration-300 inline-block">
+                        <a href="https://wa.me/5561994460606" target="_blank" class="bg-brand-text text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-black transform hover:scale-105 transition-all duration-300 inline-block">
                             Agendar Horário
                         </a>
                     </div>
@@ -311,14 +330,14 @@
 
     </main>
 
-    <!-- 8. Footer -->
+    <!-- 9. Footer -->
     <footer class="bg-white py-10">
         <div class="container mx-auto px-6 text-center md:flex md:justify-between items-center">
             <p class="text-gray-600 font-serif text-lg">&copy; 2025 Unha de Boneca Esmalteria</p>
             <div class="flex justify-center space-x-8 mt-6 md:mt-0">
-                <a href="#" class="text-gray-500 hover:text-brand-primary-dark">Instagram</a>
-                <a href="#" class="text-gray-500 hover:text-brand-primary-dark">Facebook</a>
-                <a href="#" class="text-gray-500 hover:text-brand-primary-dark">Google Maps</a>
+                <a href="https://www.instagram.com/unhadebonecaesmalteria/" target="_blank" class="text-gray-500 hover:text-brand-primary-dark">Instagram</a>
+                <a href="https://www.facebook.com/unhadebonecaesmalteria1/" target="_blank" class="text-gray-500 hover:text-brand-primary-dark">Facebook</a>
+                <a href="https://www.google.com/search?q=unha+de+boneca+asa+norte&rlz=1C1GCEA_enBR1090BR1090&oq=unha+de+boneca+asa+norte&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyBggCEEUYQDIICAMQABgWGB4yCAgEEAAYFhgeMggIBRAAGBYYHjIKCAYQABiABBiiBDIGCAcQRRhB0gEINDgyM2owajeoAgiwAgHxBZxwV4T0iGEA8QWccFeE9IhhAA&sourceid=chrome&ie=UTF-8" target="_blank" class="text-gray-500 hover:text-brand-primary-dark">Unha de Boneca no Google</a>
             </div>
         </div>
     </footer>
